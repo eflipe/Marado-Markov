@@ -1,0 +1,23 @@
+<html>
+ <body>
+  <div align="center" style="padding-top:20px;">
+    <h3>{{ artist }}</h3>
+    <h3>Contador = {{ contador }}</h3>
+    {% if msj %}
+      <h3>{{ msj }}</h3>
+    {% else %}
+    <br />
+    <form method="post">
+     <h2>
+       {{ result }}
+     </h2>
+     <input type="hidden" value="{{ result }}" name="guardar_frase" id="guardar_frase" />
+     <button type="submit"name="button">Zafa!</button>
+    </form>
+    {% endif %}
+   <a href="{{ url_for('marado_markov') }}">
+    <input type="submit" value="Otra frase" />
+  </a>
+  </div>
+ </body>
+</html>
